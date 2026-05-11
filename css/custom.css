@@ -1,0 +1,257 @@
+/* Custom Styles for UBC Builder Enhancement */
+
+:root {
+    --accent: #ff9800;
+    --dark: #0b0b0b;
+    --light: #ffffff;
+    --glass: rgba(255, 255, 255, 0.05);
+}
+
+/* Force original colors and disable template filters */
+img, .ubc-project-img, .ubc-project-card, .ubc-hero-section, .ubc-progress-container {
+    filter: none !important;
+    mix-blend-mode: normal !important;
+    -webkit-filter: none !important;
+}
+
+/* Ongoing Projects Progress */
+.ubc-progress-container {
+    padding: 120px 0;
+    background: #ffffff !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.mil-ongoing-slider {
+    overflow: visible !important;
+}
+
+.mil-mt-60 {
+    margin-top: 60px;
+}
+
+.ubc-progress-container h2 {
+    color: #000000 !important;
+}
+
+.ubc-progress-container .mil-suptitle {
+    color: #888888 !important;
+}
+
+.ubc-watermark {
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    font-size: 300px;
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.05); /* Dark watermark on light bg */
+    pointer-events: none;
+    line-height: 1;
+    z-index: 0;
+}
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    background: #111;
+    margin-bottom: 30px;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ubc-project-card:hover {
+    transform: translateY(-15px);
+    border-color: rgba(255, 152, 0, 0.3);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+}
+
+.ubc-project-img {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.ubc-project-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.ubc-project-card:hover .ubc-project-img img {
+    transform: scale(1.1);
+}
+
+.ubc-project-content {
+    padding: 40px 35px;
+    background: #161616;
+}
+
+.ubc-project-content h4 {
+    color: #ffffff !important;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.ubc-project-content p {
+    color: #cccccc !important;
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.ubc-project-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.ubc-status-tag {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: rgba(255, 152, 0, 0.15);
+    color: #ff9800;
+    padding: 6px 14px;
+    font-weight: 600;
+    border: 1px solid rgba(255, 152, 0, 0.3);
+    border-radius: 2px;
+}
+
+.ubc-progress-percent {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    color: var(--light);
+}
+
+.ubc-progress-bar-bg {
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.ubc-progress-bar-fill {
+    height: 100%;
+    background: var(--accent);
+    width: 0; /* Animated via GSAP */
+    transition: width 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+/* Hero Section Enhancements */
+.ubc-hero-section {
+    background: #000 !important;
+    position: relative;
+    padding: 200px 0 100px;
+    overflow: hidden;
+}
+
+.ubc-hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/legacy_hero.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;
+    z-index: 0;
+    filter: none !important; /* Prevent any accidental inversion */
+}
+
+.mil-banner-content {
+    position: relative;
+    z-index: 1;
+}
+
+.mil-banner-content h1 {
+    font-weight: 900;
+    letter-spacing: -2px;
+    line-height: 1;
+    color: #ffffff !important;
+    text-transform: uppercase;
+}
+
+.mil-banner-content p {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-size: 18px;
+    max-width: 600px;
+}
+
+.mil-banner-content .mil-thin {
+    font-weight: 200;
+    opacity: 0.7;
+}
+
+/* Stats Section */
+.ubc-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.ubc-stat-item {
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 3px solid var(--accent);
+    transition: all 0.3s ease;
+}
+
+.ubc-stat-item:hover {
+    background: rgba(255, 255, 255, 0.07);
+    transform: translateY(-5px);
+}
+
+.ubc-stat-number {
+    font-size: 64px;
+    font-weight: 800;
+    color: #ff9800 !important; /* Force Gold Color */
+    margin-bottom: 10px;
+    display: block;
+    line-height: 1;
+}
+
+.ubc-stat-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #000000 !important; /* Force Black for Light BG */
+    font-weight: 600;
+}
+
+/* Portfolio Section */
+.mil-portfolio-item {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.mil-cover-frame {
+    height: 450px;
+}
+
+/* Watermark & Decorative Elements */
+.ubc-watermark {
+    position: absolute;
+    bottom: -50px;
+    right: -20px;
+    font-size: 200px;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.02);
+    pointer-events: none;
+    z-index: 0;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.ubc-accent-line {
+    width: 100px;
+    height: 2px;
+    background: var(--accent);
+    margin-bottom: 30px;
+}
