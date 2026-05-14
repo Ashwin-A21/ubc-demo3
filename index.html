@@ -45,16 +45,8 @@
         <!-- preloader -->
         <div class="mil-preloader">
             <div class="mil-preloader-animation">
-                <div class="mil-pos-abs mil-animation-1">
-                    <p class="mil-h3 mil-muted mil-thin">Architectural</p>
-                    <p class="mil-h3 mil-muted">Integrity</p>
-                    <p class="mil-h3 mil-muted mil-thin">Excellence</p>
-                </div>
-                <div class="mil-pos-abs mil-animation-2">
-                    <div class="mil-reveal-frame">
-                        <p class="mil-reveal-box"></p>
-                        <p class="mil-h3 mil-muted mil-thin">ubcbuilder.com</p>
-                    </div>
+                <div class="ubc-preloader-logo">
+                    <img src="assets/ubc_logo.svg" alt="UBC Logo" style="width: 200px; height: auto;">
                 </div>
             </div>
         </div>
@@ -70,7 +62,7 @@
         <div class="mil-menu-frame">
             <!-- frame clone -->
             <div class="mil-frame-top">
-                <a href="index.html" class="mil-logo">UBC.</a>
+                <a href="index.html" class="mil-logo"><img src="assets/logo.png" alt="UBC Logo" style="height: 40px; width: auto;"></a>
                 <div class="mil-menu-btn">
                     <span></span>
                 </div>
@@ -84,7 +76,7 @@
                             <nav class="mil-main-menu" id="swupMenu">
                                 <ul>
                                     <li class="mil-has-children mil-active">
-                                        <a href="index.html">Home</a>
+                                        <a href="#top">Home</a>
                                     </li>
                                     <li class="mil-has-children">
                                         <a href="#about">The Studio</a>
@@ -168,7 +160,7 @@
         <!-- frame -->
         <div class="mil-frame">
             <div class="mil-frame-top">
-                <a href="index.html" class="mil-logo">UBC.</a>
+                <a href="index.html" class="mil-logo"><img src="assets/logo.png" alt="UBC Logo" style="height: 40px; width: auto;"></a>
                 <div class="mil-menu-btn">
                     <span></span>
                 </div>
@@ -298,6 +290,41 @@
                     </div>
                 </section>
                 <!-- about end -->
+                
+                <!-- brand marquee -->
+                <section class="ubc-brand-marquee-section">
+                    <div class="container-fluid mil-p-0">
+                        <div class="ubc-brand-marquee">
+                            <div class="ubc-marquee-content">
+                                <div class="ubc-brand-item"><img src="img/partners/1.svg" alt="Partner"></div>
+                                <div class="ubc-brand-item"><img src="img/partners/2.svg" alt="Partner"></div>
+                                <div class="ubc-brand-item"><span>ARCH</span></div>
+                                <div class="ubc-brand-item"><span>VISTA</span></div>
+                                <div class="ubc-brand-item"><span>MODERN</span></div>
+                                <div class="ubc-brand-item"><span>CORE</span></div>
+                                <div class="ubc-brand-item"><span>ZENITH</span></div>
+                                <!-- Duplicate for infinite loop -->
+                                <div class="ubc-brand-item"><img src="img/partners/1.svg" alt="Partner"></div>
+                                <div class="ubc-brand-item"><img src="img/partners/2.svg" alt="Partner"></div>
+                                <div class="ubc-brand-item"><span>ARCH</span></div>
+                                <div class="ubc-brand-item"><span>VISTA</span></div>
+                                <div class="ubc-brand-item"><span>MODERN</span></div>
+                                <div class="ubc-brand-item"><span>CORE</span></div>
+                                <div class="ubc-brand-item"><span>ZENITH</span></div>
+                                <!-- Additional duplication for seamlessness -->
+                                <div class="ubc-brand-item"><img src="img/partners/1.svg" alt="Partner"></div>
+                                <div class="ubc-brand-item"><img src="img/partners/2.svg" alt="Partner"></div>
+                                <div class="ubc-brand-item"><span>ARCH</span></div>
+                                <div class="ubc-brand-item"><span>VISTA</span></div>
+                                <div class="ubc-brand-item"><span>MODERN</span></div>
+                                <div class="ubc-brand-item"><span>CORE</span></div>
+                                <div class="ubc-brand-item"><span>ZENITH</span></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- brand marquee end -->
 
                 <!-- ongoing projects editorial -->
                 <section class="ubc-editorial-section" id="ongoing">
@@ -309,9 +336,9 @@
                                     <div class="row no-gutters">
                                         <div class="col-lg-7">
                                             <div class="ubc-editorial-img-wrapper mil-up">
-                                                <div class="ubc-editorial-img">
-                                                    <img src="assets/evelyn.jpeg" alt="Evelyn John's">
-                                                </div>
+                                                <a href="evelyn-johns.html" class="ubc-editorial-img">
+                                                    <img src="assets/evelyn_4k.jpeg" alt="Evelyn John's">
+                                                </a>
                                             </div>
                                         </div>
                                         <div class="col-lg-5">
@@ -320,7 +347,7 @@
                                                     <div class="ubc-editorial-header">
                                                         <span class="ubc-project-number">01</span>
                                                         <span class="mil-suptitle mil-mb-30">Featured Development</span>
-                                                        <h2 class="mil-muted mil-mb-30">Evelyn <span class="mil-thin">John's</span></h2>
+                                                        <h2 class="mil-muted mil-mb-30"><a href="evelyn-johns.html" style="color: inherit;">Evelyn <span class="mil-thin">John's</span></a></h2>
                                                     </div>
                                                     <p class="mil-light-soft mil-mb-60">Premium residences at Bejai New Road, designed for elite urban living. Experience architectural excellence in every corner.</p>
                                                     
@@ -339,12 +366,17 @@
                                                         <div class="row">
                                                             <div class="col-4">
                                                                 <div class="ubc-thumb-item" onclick="goToSlide(1)">
-                                                                    <img src="assets/serene.jpeg" alt="Serene">
+                                                                    <img src="assets/serene_1.jpeg" alt="Serene">
                                                                 </div>
                                                             </div>
                                                             <div class="col-4">
                                                                 <div class="ubc-thumb-item" onclick="goToSlide(2)">
-                                                                    <img src="assets/tower7.jpeg" alt="Tower7">
+                                                                    <img src="assets/tower_4k.jpeg" alt="Tower">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-4">
+                                                                <div class="ubc-thumb-item" onclick="goToSlide(3)">
+                                                                    <img src="assets/triangle_4k.jpeg" alt="Triangle">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -360,9 +392,9 @@
                                     <div class="row no-gutters">
                                         <div class="col-lg-7">
                                             <div class="ubc-editorial-img-wrapper">
-                                                <div class="ubc-editorial-img">
-                                                    <img src="assets/serene.jpeg" alt="Serene Residences">
-                                                </div>
+                                                <a href="serene-residences.html" class="ubc-editorial-img">
+                                                    <img src="assets/serene_1.jpeg" alt="Serene Residences">
+                                                </a>
                                             </div>
                                         </div>
                                         <div class="col-lg-5">
@@ -371,7 +403,7 @@
                                                     <div class="ubc-editorial-header">
                                                         <span class="ubc-project-number">02</span>
                                                         <span class="mil-suptitle mil-mb-30">Waterfront Luxury</span>
-                                                        <h2 class="mil-muted mil-mb-30">Serene <span class="mil-thin">Residences</span></h2>
+                                                        <h2 class="mil-muted mil-mb-30"><a href="serene-residences.html" style="color: inherit;">Serene <span class="mil-thin">Residences</span></a></h2>
                                                     </div>
                                                     <p class="mil-light-soft mil-mb-60">Waterfront tranquility at Bolar, Mangalore. Experience pure serenity with breathtaking views and modern amenities.</p>
                                                     
@@ -390,12 +422,17 @@
                                                         <div class="row">
                                                             <div class="col-4">
                                                                 <div class="ubc-thumb-item" onclick="goToSlide(2)">
-                                                                    <img src="assets/tower7.jpeg" alt="Tower7">
+                                                                    <img src="assets/tower_4k.jpeg" alt="Tower">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-4">
+                                                                <div class="ubc-thumb-item" onclick="goToSlide(3)">
+                                                                    <img src="assets/triangle_4k.jpeg" alt="Triangle">
                                                                 </div>
                                                             </div>
                                                             <div class="col-4">
                                                                 <div class="ubc-thumb-item" onclick="goToSlide(0)">
-                                                                    <img src="assets/evelyn.jpeg" alt="Evelyn">
+                                                                    <img src="assets/evelyn_4k.jpeg" alt="Evelyn">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -411,9 +448,9 @@
                                     <div class="row no-gutters">
                                         <div class="col-lg-7">
                                             <div class="ubc-editorial-img-wrapper">
-                                                <div class="ubc-editorial-img">
-                                                    <img src="assets/tower7.jpeg" alt="Kankanady Tower">
-                                                </div>
+                                                <a href="kankanady-tower.html" class="ubc-editorial-img">
+                                                    <img src="assets/tower_4k.jpeg" alt="Kankanady Tower">
+                                                </a>
                                             </div>
                                         </div>
                                         <div class="col-lg-5">
@@ -422,7 +459,7 @@
                                                     <div class="ubc-editorial-header">
                                                         <span class="ubc-project-number">03</span>
                                                         <span class="mil-suptitle mil-mb-30">Urban Landmark</span>
-                                                        <h2 class="mil-muted mil-mb-30">Kankanady <span class="mil-thin">Tower</span></h2>
+                                                        <h2 class="mil-muted mil-mb-30"><a href="kankanady-tower.html" style="color: inherit;">Kankanady <span class="mil-thin">Tower</span></a></h2>
                                                     </div>
                                                     <p class="mil-light-soft mil-mb-60">The new architectural landmark in the heart of Kankanady. Redefining urban skyline with precision and elegance.</p>
                                                     
@@ -440,13 +477,74 @@
                                                         <p class="mil-text-sm mil-light-soft mil-mb-20">UP NEXT</p>
                                                         <div class="row">
                                                             <div class="col-4">
+                                                                <div class="ubc-thumb-item" onclick="goToSlide(3)">
+                                                                    <img src="assets/triangle_4k.jpeg" alt="Triangle">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-4">
                                                                 <div class="ubc-thumb-item" onclick="goToSlide(0)">
-                                                                    <img src="assets/evelyn.jpeg" alt="Evelyn">
+                                                                    <img src="assets/evelyn_4k.jpeg" alt="Evelyn">
                                                                 </div>
                                                             </div>
                                                             <div class="col-4">
                                                                 <div class="ubc-thumb-item" onclick="goToSlide(1)">
-                                                                    <img src="assets/serene.jpeg" alt="Serene">
+                                                                    <img src="assets/serene_1.jpeg" alt="Serene">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Project 4 -->
+                                <div class="swiper-slide">
+                                    <div class="row no-gutters">
+                                        <div class="col-lg-7">
+                                            <div class="ubc-editorial-img-wrapper">
+                                                <a href="gm-triangle.html" class="ubc-editorial-img">
+                                                    <img src="assets/triangle_4k.jpeg" alt="GM Triangle">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-5">
+                                            <div class="ubc-editorial-content">
+                                                <div class="mil-mb-60">
+                                                    <div class="ubc-editorial-header">
+                                                        <span class="ubc-project-number">04</span>
+                                                        <span class="mil-suptitle mil-mb-30">Premium Villament</span>
+                                                        <h2 class="mil-muted mil-mb-30"><a href="gm-triangle.html" style="color: inherit;">GM <span class="mil-thin">Triangle</span></a></h2>
+                                                    </div>
+                                                    <p class="mil-light-soft mil-mb-60">Exclusive villament-style living at Pandeshwar. Single 4 BHK unit per floor, offering ultimate privacy and luxury.</p>
+                                                    
+                                                    <div class="ubc-modern-progress mil-mb-60">
+                                                        <div class="ubc-progress-info">
+                                                            <span class="ubc-label">Site Work Phase</span>
+                                                            <span class="ubc-percent">5%</span>
+                                                        </div>
+                                                        <div class="ubc-bar-bg">
+                                                            <div class="ubc-bar-fill" data-progress="5%"></div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="ubc-thumb-nav">
+                                                        <p class="mil-text-sm mil-light-soft mil-mb-20">UP NEXT</p>
+                                                        <div class="row">
+                                                            <div class="col-4">
+                                                                <div class="ubc-thumb-item" onclick="goToSlide(0)">
+                                                                    <img src="assets/evelyn_4k.jpeg" alt="Evelyn">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-4">
+                                                                <div class="ubc-thumb-item" onclick="goToSlide(1)">
+                                                                    <img src="assets/serene_1.jpeg" alt="Serene">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-4">
+                                                                <div class="ubc-thumb-item" onclick="goToSlide(2)">
+                                                                    <img src="assets/tower_4k.jpeg" alt="Tower">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -458,15 +556,7 @@
                                 </div>
                             </div>
                             
-                            <!-- slider controls -->
-                            <div class="ubc-editorial-controls">
-                                <div class="mil-slider-arrow mil-prev mil-ongoing-prev">
-                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                </div>
-                                <div class="mil-slider-arrow mil-next mil-ongoing-next">
-                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
                 </section>
@@ -487,9 +577,9 @@
                         </div>
                         <div class="row">
                             <div class="col-lg-6">
-                                <div class="mil-portfolio-item mil-up mil-mb-60">
+                                <a href="lotus-park.html" class="mil-portfolio-item mil-up mil-mb-60" style="display: block;">
                                     <div class="mil-cover-frame">
-                                        <img src="assets/lotus.jpeg" alt="Lotus Park">
+                                        <img src="assets/lotus_4k.jpeg" alt="Lotus Park">
                                     </div>
                                     <div class="mil-description">
                                         <div class="mil-labels mil-mb-30">
@@ -499,12 +589,12 @@
                                         <p>A masterclass in modern residential architecture, featuring premium amenities
                                             and structural integrity.</p>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                             <div class="col-lg-6">
-                                <div class="mil-portfolio-item mil-up mil-mb-60">
+                                <a href="ubc-square.html" class="mil-portfolio-item mil-up mil-mb-60" style="display: block;">
                                     <div class="mil-cover-frame">
-                                        <img src="assets/square.jpeg" alt="UBC Square">
+                                        <img src="assets/square_4k.jpeg" alt="UBC Square">
                                     </div>
                                     <div class="mil-description">
                                         <div class="mil-labels mil-mb-30">
@@ -514,7 +604,7 @@
                                         <p>Dynamic commercial and residential mixed-use development in a prime Mangalore
                                             location.</p>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -528,7 +618,7 @@
                             <div class="row justify-content-between">
                                 <div class="col-md-4 col-lg-4 mil-mb-60">
 
-                                    <div class="mil-muted mil-logo mil-up mil-mb-30">UBC Builder.</div>
+                                    <div class="mil-muted mil-logo mil-up mil-mb-30"><img src="assets/logo.png" alt="UBC Logo" style="height: 80px; width: auto;"></div>
 
                                     <p class="mil-light-soft mil-up mil-mb-30">Stay updated with our latest
                                         architectural developments.</p>
@@ -750,9 +840,9 @@
         }
 
         .ubc-editorial-controls .mil-slider-arrow:hover {
-            background: #ff9800;
-            border-color: #ff9800;
-            color: #000;
+            background: #118D57;
+            border-color: #118D57;
+            color: #fff;
         }
 
         .ubc-editorial-controls .mil-slider-arrow svg {
@@ -781,14 +871,14 @@
 
         .swiper-slide-active .ubc-project-number {
             left: 0;
-            color: rgba(255, 152, 0, 0.05);
+            color: rgba(17, 61, 45, 0.05);
         }
 
         .ubc-modern-progress {
             width: 100%;
             background: rgba(255,255,255,0.02);
             padding: 30px;
-            border-left: 2px solid #ff9800;
+            border-left: 2px solid #118D57;
         }
 
         .ubc-modern-progress {
@@ -810,7 +900,7 @@
 
         .ubc-percent {
             font-weight: 700;
-            color: #ff9800;
+            color: #118D57;
         }
 
         .ubc-bar-bg {
@@ -821,7 +911,7 @@
 
         .ubc-bar-fill {
             height: 100%;
-            background: #ff9800;
+            background: #118D57;
             width: 0;
         }
 

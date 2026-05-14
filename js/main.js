@@ -19,16 +19,20 @@ $(function () {
 
     ***************************/
     let swup;
-    try {
-        const options = {
-            containers: ['#swupMain', '#swupMenu'],
-            animateHistoryBrowsing: true,
-            linkSelector: 'a:not([data-no-swup])',
-            animationSelector: '[class="mil-main-transition"]'
-        };
-        swup = new Swup(options);
-    } catch (e) {
-        console.warn("Swup could not be initialized (likely due to file:// protocol limitations). Transitions will be disabled.");
+    if (window.location.protocol !== 'file:') {
+        try {
+            const options = {
+                containers: ['#swupMain', '#swupMenu'],
+                animateHistoryBrowsing: true,
+                linkSelector: 'a:not([data-no-swup])',
+                animationSelector: '[class="mil-main-transition"]'
+            };
+            swup = new Swup(options);
+        } catch (e) {
+            console.warn("Swup could not be initialized. Transitions will be disabled.");
+        }
+    } else {
+        console.log("Running on file:// protocol. Swup disabled for compatibility.");
     }
 
     /***************************
@@ -47,7 +51,7 @@ $(function () {
 
     ***************************/
 
-    var accent = 'rgba(255, 152, 0, 1)';
+    var accent = 'rgba(17, 141, 87, 1)';
     var dark = '#000';
     var light = '#fff';
 
@@ -63,52 +67,28 @@ $(function () {
         opacity: 1,
     });
 
-    timeline.fromTo(
-        ".mil-animation-1 .mil-h3", {
-            y: "30px",
-            opacity: 0
-        }, {
-            y: "0px",
-            opacity: 1,
-            stagger: 0.4
-        },
-    );
-
-    timeline.to(".mil-animation-1 .mil-h3", {
+    timeline.fromTo(".ubc-preloader-logo", {
         opacity: 0,
-        y: '-30',
-    }, "+=.3");
-
-    timeline.fromTo(".mil-reveal-box", 0.1, {
-        opacity: 0,
+        scale: 0.8
     }, {
         opacity: 1,
-        x: '-30',
+        scale: 1,
+        duration: 1,
+        ease: "power2.out"
     });
 
-    timeline.to(".mil-reveal-box", 0.45, {
-        width: "100%",
-        x: 0,
-    }, "+=.1");
-    timeline.to(".mil-reveal-box", {
-        right: "0"
-    });
-    timeline.to(".mil-reveal-box", 0.3, {
-        width: "0%"
-    });
-    timeline.fromTo(".mil-animation-2 .mil-h3", {
+    timeline.to(".ubc-preloader-logo", {
         opacity: 0,
-    }, {
-        opacity: 1,
-    }, "-=.5");
-    timeline.to(".mil-animation-2 .mil-h3", 0.6, {
-        opacity: 0,
-        y: '-30'
-    }, "+=.5");
+        scale: 1.1,
+        duration: 0.8,
+        ease: "power2.in"
+    }, "+=0.5");
+
     timeline.to(".mil-preloader", 0.8, {
         opacity: 0,
         ease: 'sine',
-    }, "+=.2");
+    });
+
     timeline.fromTo(".mil-up", 0.8, {
         opacity: 0,
         y: 40,
