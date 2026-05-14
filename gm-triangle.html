@@ -46,7 +46,10 @@
         <div class="mil-preloader">
             <div class="mil-preloader-animation">
                 <div class="ubc-preloader-logo">
-                    <img src="assets/ubc_logo.svg" alt="UBC Logo" style="width: 200px; height: auto;">
+                    <video autoplay muted playsinline loop class="ubc-preloader-video">
+                        <source src="assets/logo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
             </div>
         </div>
@@ -62,7 +65,7 @@
         <div class="mil-menu-frame">
             <!-- frame clone -->
             <div class="mil-frame-top">
-                <a href="index.html" class="mil-logo"><img src="assets/logo.png" alt="UBC Logo" style="height: 40px; width: auto;"></a>
+                <a href="index.html" class="mil-logo"><img src="assets/logo.png" alt="UBC Logo" style="height: 80px; width: auto;"></a>
                 <div class="mil-menu-btn">
                     <span></span>
                 </div>
@@ -266,7 +269,7 @@
                             <div class="row justify-content-between">
                                 <div class="col-md-4 col-lg-4 mil-mb-60">
 
-                                    <div class="mil-muted mil-logo mil-up mil-mb-30"><img src="assets/logo.png" alt="UBC Logo" style="height: 80px; width: auto;"></div>
+                                    <div class="ubc-footer-logo-container mil-up"><img src="assets/logo.png" alt="UBC Logo"></div>
 
                                     <p class="mil-light-soft mil-up mil-mb-30">Stay updated with our latest
                                         architectural developments.</p>
@@ -274,7 +277,7 @@
                                     <form class="mil-subscribe-form mil-up">
                                         <input type="text" placeholder="Your Email Address">
                                         <button type="submit"
-                                            class="mil-button mil-icon-button-sm mil-arrow-place"></button>
+                                            class="mil-button mil-icon-button-sm ubc-send-btn"><i class="fas fa-paper-plane"></i></button>
                                     </form>
 
                                 </div>

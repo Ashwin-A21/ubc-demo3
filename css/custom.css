@@ -370,9 +370,52 @@ img, .ubc-project-img, .ubc-project-card, .ubc-hero-section, .ubc-progress-conta
 .ubc-preloader-logo {
     opacity: 0;
     transform: scale(0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Brand Marquee */
+.ubc-preloader-video {
+    width: 300px; /* Medium size for desktop */
+    height: auto;
+    max-width: 80vw; /* Responsive scaling */
+    mix-blend-mode: multiply; /* Blends light colors into the white background */
+    filter: brightness(1.1) contrast(1.2); /* Forces off-white backgrounds to pure white */
+    outline: none;
+    border: none;
+    display: block;
+}
+
+@media screen and (max-width: 767px) {
+    .ubc-preloader-video {
+        width: 200px; /* Smaller size for mobile */
+    }
+}
+/* Footer Logo Container - Enhanced */
+.ubc-footer-logo-container {
+    background: #ffffff;
+    padding: 30px 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    width: auto;
+    min-width: 250px;
+}
+
+.ubc-footer-logo-container img {
+    display: block;
+    max-width: 100%;
+    height: 120px !important; /* Significantly larger logo for the large white box */
+}
+
+/* Subscribe Button Icon Fix */
+.ubc-send-btn i {
+    font-size: 14px;
+    color: #fff;
+}
 .ubc-brand-marquee-section {
     background: #ffffff;
     padding: 60px 0;
@@ -625,12 +668,13 @@ img, .ubc-project-img, .ubc-project-card, .ubc-hero-section, .ubc-progress-conta
 @media screen and (max-width: 991px) {
     .mil-frame-top {
         padding: 20px !important;
-        background: rgba(0, 0, 0, 0.8);
-        backdrop-filter: blur(10px);
+        background: transparent !important;
+        backdrop-filter: none !important;
+        border-bottom: none !important;
     }
     
     .mil-logo img {
-        height: 30px !important;
+        height: 50px !important;
     }
     
     .ubc-editorial-img-wrapper {

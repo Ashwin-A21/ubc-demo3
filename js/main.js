@@ -80,11 +80,11 @@ $(function () {
     timeline.to(".ubc-preloader-logo", {
         opacity: 0,
         scale: 1.1,
-        duration: 0.8,
+        duration: 1.2,
         ease: "power2.in"
-    }, "+=0.5");
+    }, "+=4.0");
 
-    timeline.to(".mil-preloader", 0.8, {
+    timeline.to(".mil-preloader", 1.0, {
         opacity: 0,
         ease: 'sine',
     });
@@ -102,7 +102,7 @@ $(function () {
         onComplete: function () {
             $('.mil-preloader').addClass("mil-hidden");
         },
-    }, "-=1");
+    }, "-=0.5");
     /***************************
 
     anchor scroll
