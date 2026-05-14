@@ -1,0 +1,689 @@
+/* Custom Styles for UBC Builder Enhancement */
+
+:root {
+    --accent: #118D57;
+    --dark: #0b0b0b;
+    --light: #ffffff;
+    --glass: rgba(255, 255, 255, 0.05);
+}
+
+/* Force original colors and disable template filters */
+img, .ubc-project-img, .ubc-project-card, .ubc-hero-section, .ubc-progress-container, .mil-logo img {
+    filter: none !important;
+    mix-blend-mode: normal !important;
+    -webkit-filter: none !important;
+}
+
+/* Ongoing Projects Progress */
+.ubc-progress-container {
+    padding: 120px 0;
+    background: #ffffff !important;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Footer Fix: Disable Invert Filter and set solid dark background */
+.mil-dark-bg {
+    background: #0b0b0b !important;
+}
+
+.mil-dark-bg:before {
+    display: none !important;
+}
+
+.mil-dark-bg .mil-light-soft {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.mil-dark-bg h6, 
+.mil-dark-bg .mil-muted,
+.mil-dark-bg a {
+    color: #ffffff !important;
+}
+
+.mil-dark-bg .mil-footer-menu ul li a {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.mil-dark-bg .mil-footer-menu ul li a:hover {
+    color: var(--accent) !important;
+}
+
+/* Button Padding Fix */
+.mil-button {
+    padding: 0 40px !important;
+    height: 60px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: auto !important;
+    min-width: 160px;
+    color: #ffffff !important; /* White text for better contrast */
+}
+
+
+/* Ensure circular text buttons remain pills as per original design */
+.mil-circle-text .mil-button {
+    min-width: 0 !important;
+    width: 30px !important;
+    height: 70px !important;
+    padding: 0 !important;
+    border-radius: 15px !important;
+}
+
+
+
+.mil-button.mil-icon-button-sm {
+    min-width: 0 !important;
+    width: 50px !important;
+    height: 50px !important;
+    padding: 0 !important;
+    border-radius: 50% !important;
+}
+
+/* Current Page Clickable Fix */
+.mil-current-page {
+    pointer-events: all !important;
+}
+
+.mil-current-page a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+
+
+
+
+.mil-button svg {
+    margin-left: 20px !important;
+    margin-right: -10px; /* Pull arrow slightly closer to edge for balance */
+}
+
+.mil-button.mil-icon-button-sm {
+    padding: 0 !important;
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50% !important;
+}
+
+.mil-button.mil-icon-button-sm svg {
+    margin-left: 0 !important;
+}
+
+
+
+
+.mil-ongoing-slider {
+    overflow: visible !important;
+}
+
+.mil-mt-60 {
+    margin-top: 60px;
+}
+
+.ubc-progress-container h2 {
+    color: #000000 !important;
+}
+
+.ubc-progress-container .mil-suptitle {
+    color: #888888 !important;
+}
+
+.ubc-watermark {
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    font-size: 300px;
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.05); /* Dark watermark on light bg */
+    pointer-events: none;
+    line-height: 1;
+    z-index: 0;
+}
+.ubc-project-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    background: #111;
+    margin-bottom: 30px;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ubc-project-card:hover {
+    transform: translateY(-15px);
+    border-color: rgba(17, 61, 45, 0.3);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+}
+
+.ubc-project-img {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.ubc-project-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.ubc-project-card:hover .ubc-project-img img {
+    transform: scale(1.1);
+}
+
+.ubc-project-content {
+    padding: 40px 35px;
+    background: #161616;
+}
+
+.ubc-project-content h4 {
+    color: #ffffff !important;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.ubc-project-content p {
+    color: #cccccc !important;
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.ubc-project-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.ubc-status-tag {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: rgba(17, 61, 45, 0.15);
+    color: #118D57;
+    padding: 6px 14px;
+    font-weight: 600;
+    border: 1px solid rgba(17, 61, 45, 0.3);
+    border-radius: 2px;
+}
+
+.ubc-progress-percent {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    color: var(--light);
+}
+
+.ubc-progress-bar-bg {
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.ubc-progress-bar-fill {
+    height: 100%;
+    background: var(--accent);
+    width: 0; /* Animated via GSAP */
+    transition: width 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+/* Hero Section Enhancements */
+.ubc-hero-section {
+    background: #000 !important;
+    position: relative;
+    padding: 200px 0 100px;
+    overflow: hidden;
+}
+
+.ubc-hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/lotus_4k.jpeg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;
+    z-index: 0;
+    filter: none !important; /* Prevent any accidental inversion */
+}
+
+.mil-banner-content {
+    position: relative;
+    z-index: 1;
+}
+
+.mil-banner-content h1 {
+    font-weight: 900;
+    letter-spacing: -2px;
+    line-height: 1;
+    color: #ffffff !important;
+    text-transform: uppercase;
+}
+
+.mil-banner-content p {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-size: 18px;
+    max-width: 600px;
+}
+
+.mil-banner-content .mil-thin {
+    font-weight: 200;
+    opacity: 0.7;
+}
+
+/* Stats Section */
+.ubc-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.ubc-stat-item {
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 3px solid var(--accent);
+    transition: all 0.3s ease;
+}
+
+.ubc-stat-item:hover {
+    background: rgba(255, 255, 255, 0.07);
+    transform: translateY(-5px);
+}
+
+.ubc-stat-number {
+    font-size: 64px;
+    font-weight: 800;
+    color: #118D57 !important; /* Force Premium Green Color */
+    margin-bottom: 10px;
+    display: block;
+    line-height: 1;
+}
+
+.ubc-stat-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #000000 !important; /* Force Black for Light BG */
+    font-weight: 600;
+}
+
+/* Portfolio Section */
+.mil-cover-frame {
+    height: 500px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.mil-cover-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center bottom; /* Focus on the building at the bottom of the shot */
+    transition: transform 0.6s ease;
+}
+
+.mil-portfolio-item:hover .mil-cover-frame img {
+    transform: scale(1.05);
+}
+
+/* Watermark & Decorative Elements */
+.ubc-watermark {
+    position: absolute;
+    bottom: -50px;
+    right: -20px;
+    font-size: 200px;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.02);
+    pointer-events: none;
+    z-index: 0;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.ubc-accent-line {
+    width: 100px;
+    height: 2px;
+    background: var(--accent);
+    margin-bottom: 30px;
+}
+
+/* Preloader Enhancements */
+.mil-preloader-animation {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.ubc-preloader-logo {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+/* Brand Marquee */
+.ubc-brand-marquee-section {
+    background: #ffffff;
+    padding: 60px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.ubc-brand-marquee {
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: 100px;
+}
+
+.ubc-marquee-content {
+    display: flex;
+    flex-shrink: 0;
+    gap: 100px;
+    padding-right: 100px; /* Match gap for seamless transition */
+    animation: scroll-marquee 20s linear infinite;
+}
+
+.ubc-brand-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    opacity: 0.3;
+    transition: all 0.3s ease;
+    filter: grayscale(100%);
+    white-space: nowrap;
+}
+
+.ubc-brand-item:hover {
+    opacity: 0.8;
+    filter: grayscale(0%);
+}
+
+.ubc-brand-item img {
+    height: 100%;
+    width: auto;
+}
+
+.ubc-brand-item span {
+    font-family: "Outfit", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 5px;
+    color: #000000;
+}
+
+@keyframes scroll-marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Project Detail Table Styles */
+.mil-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.mil-table th,
+.mil-table td {
+    padding: 20px 0;
+    text-align: left;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    font-family: 'Outfit', sans-serif;
+}
+
+.mil-table th {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--accent);
+}
+
+.mil-table td {
+    font-size: 16px;
+    color: var(--dark);
+    font-weight: 400;
+}
+
+.mil-table tr:last-child td {
+    border-bottom: none;
+}
+
+
+
+
+/* Editorial Project Section Styles */
+.ubc-editorial-section {
+    background: #000;
+    overflow: hidden;
+}
+
+.ubc-editorial-img-wrapper {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.ubc-editorial-img {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.ubc-editorial-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.ubc-editorial-img:hover img {
+    transform: scale(1.05);
+}
+
+.ubc-editorial-content {
+    background: #000;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 12% 100px;
+    position: relative;
+}
+
+.ubc-editorial-header {
+    margin-top: auto;
+}
+
+.ubc-project-number {
+    font-size: 120px;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.05);
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    line-height: 1;
+}
+
+.ubc-modern-progress {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.ubc-progress-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.ubc-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #888;
+}
+
+.ubc-percent {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.ubc-bar-bg {
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.ubc-bar-fill {
+    height: 100%;
+    background: var(--accent);
+    width: 0;
+    transition: width 1.5s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.ubc-thumb-nav {
+    margin-top: 40px;
+    width: 80%;
+}
+
+/* Slider Controls Positioning */
+.ubc-editorial-controls {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    display: flex;
+    gap: 15px;
+    z-index: 10;
+}
+
+.mil-slider-arrow {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mil-slider-arrow:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+}
+
+.mil-slider-arrow svg {
+    width: 20px;
+    height: 20px;
+    color: #fff;
+}
+
+/* Thumbnail Navigation */
+.ubc-thumb-item {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    height: 80px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ubc-thumb-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+    transition: all 0.3s ease;
+}
+
+.ubc-thumb-item:hover img {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 991px) {
+    .mil-frame-top {
+        padding: 20px !important;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(10px);
+    }
+    
+    .mil-logo img {
+        height: 30px !important;
+    }
+    
+    .ubc-editorial-img-wrapper {
+        height: 40vh;
+    }
+    
+    .ubc-editorial-content {
+        padding: 40px 20px;
+    }
+    
+    .ubc-project-number {
+        font-size: 60px;
+        top: 20px;
+        right: 20px;
+        opacity: 0.1;
+    }
+    
+    .ubc-modern-progress {
+        margin-bottom: 40px;
+    }
+    
+    .ubc-thumb-nav .row {
+        margin: 0 -5px;
+    }
+    
+    .ubc-thumb-nav .col-4 {
+        padding: 0 5px;
+    }
+    
+    .ubc-editorial-controls {
+        position: relative;
+        bottom: 0;
+        right: 0;
+        margin-top: 30px;
+        gap: 15px;
+    }
+    
+    .mil-slider-arrow {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .ubc-editorial-header h2 {
+        font-size: 28px !important;
+    }
+    
+    .mil-banner-content h1 {
+        font-size: 32px !important;
+    }
+    
+    .ubc-stat-number {
+        font-size: 40px;
+    }
+}
