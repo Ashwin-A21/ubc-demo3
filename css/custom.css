@@ -238,8 +238,38 @@ img, .ubc-project-img, .ubc-project-card, .ubc-hero-section, .ubc-progress-conta
 .ubc-hero-section {
     background: #000 !important;
     position: relative;
-    padding: 200px 0 100px;
+    padding: 250px 0 120px;
     overflow: hidden;
+    width: 100%;
+    max-width: 100vw;
+}
+
+.ubc-hero-section h1 {
+    color: #ffffff !important;
+    font-size: 64px !important; /* Smaller as requested */
+    line-height: 1.1;
+    margin-bottom: 40px !important;
+}
+
+.ubc-hero-section h1 .mil-thin {
+    color: #ffffff !important;
+    opacity: 0.7;
+}
+
+@media screen and (max-width: 768px) {
+    .ubc-hero-section h1 {
+        font-size: 34px !important;
+    }
+}
+
+/* Mobile Header Hide on Scroll */
+.mil-frame-top {
+    transition: all 0.4s cubic-bezier(0, 0, 0.3642, 1) !important;
+}
+
+.mil-header-hidden {
+    transform: translateY(-100%) !important;
+    opacity: 0;
 }
 
 .ubc-hero-section::before {
@@ -257,23 +287,80 @@ img, .ubc-project-img, .ubc-project-card, .ubc-hero-section, .ubc-progress-conta
     filter: none !important; /* Prevent any accidental inversion */
 }
 
-.mil-banner-content {
-    position: relative;
-    z-index: 1;
+.mil-banner-content .mil-suptitle:before {
+    display: none !important; /* Remove the line on the left to allow clean alignment */
 }
 
-.mil-banner-content h1 {
-    font-weight: 900;
-    letter-spacing: -2px;
-    line-height: 1;
-    color: #ffffff !important;
-    text-transform: uppercase;
+.ubc-hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 40px;
 }
 
-.mil-banner-content p {
-    color: rgba(255, 255, 255, 0.9) !important;
-    font-size: 18px;
-    max-width: 600px;
+@media screen and (max-width: 768px) {
+    .ubc-hero-section {
+        padding: 150px 0 80px;
+    }
+    
+    .mil-banner-content h1 {
+        font-size: 42px !important;
+        margin-bottom: 30px !important;
+    }
+    
+    .mil-banner-content p {
+        font-size: 16px !important;
+        margin-bottom: 40px !important;
+    }
+
+    .ubc-hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        margin-top: 30px;
+    }
+    
+    .ubc-hero-buttons .mil-button {
+        width: 100% !important;
+        max-width: 280px;
+        justify-content: space-between !important;
+        padding: 0 30px !important;
+    }
+
+    .ubc-hero-buttons .mil-link {
+        width: auto !important;
+        height: auto;
+        display: inline-flex;
+        align-items: center;
+        padding: 10px 0 10px 30px; /* Aligned with pill button text */
+        border: none;
+        background: transparent;
+        border-radius: 0;
+        color: #fff !important;
+        font-size: 11px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        transition: all 0.3s ease;
+    }
+
+    .ubc-hero-buttons .mil-link:hover {
+        background: transparent;
+        border-bottom-color: var(--accent);
+    }
+
+    .mil-cover-frame {
+        height: auto !important;
+    }
+
+    .mil-cover-frame img {
+        height: auto !important;
+        object-fit: contain !important;
+    }
+
+    .mil-banner-content .mil-btn-space {
+        margin-right: 0 !important;
+        margin-bottom: 0;
+    }
 }
 
 .mil-banner-content .mil-thin {
@@ -391,24 +478,24 @@ img, .ubc-project-img, .ubc-project-card, .ubc-hero-section, .ubc-progress-conta
         width: 200px; /* Smaller size for mobile */
     }
 }
-/* Footer Logo Container - Enhanced */
+/* Footer Logo Container - Small & Minimal */
 .ubc-footer-logo-container {
     background: #ffffff;
-    padding: 30px 40px;
+    padding: 15px 25px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border-radius: 12px;
-    margin-bottom: 40px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     width: auto;
-    min-width: 250px;
+    min-width: 150px;
 }
 
 .ubc-footer-logo-container img {
     display: block;
     max-width: 100%;
-    height: 120px !important; /* Significantly larger logo for the large white box */
+    height: 50px !important; /* Smaller, more elegant logo */
 }
 
 /* Subscribe Button Icon Fix */
@@ -416,6 +503,26 @@ img, .ubc-project-img, .ubc-project-card, .ubc-hero-section, .ubc-progress-conta
     font-size: 14px;
     color: #fff;
 }
+
+/* Prevent logo overlap site-wide on project banners */
+.mil-banner-sm .mil-banner-content {
+    padding-top: 100px !important;
+}
+
+@media screen and (max-width: 991px) {
+    .mil-banner-sm .mil-banner-content {
+        padding-top: 60px !important;
+    }
+}
+
+/* Email Label & Alignment */
+.ubcinfra-email {
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: 600;
+    color: var(--accent);
+}
+
 .ubc-brand-marquee-section {
     background: #ffffff;
     padding: 60px 0;
@@ -674,34 +781,44 @@ img, .ubc-project-img, .ubc-project-card, .ubc-hero-section, .ubc-progress-conta
     }
     
     .mil-logo img {
-        height: 50px !important;
+        height: 40px !important;
     }
     
     .ubc-editorial-img-wrapper {
-        height: 40vh;
+        height: auto !important;
+        padding: 0 !important;
+        margin-top: 30px !important; /* Added gap above image on mobile */
+    }
+
+    .ubc-editorial-img {
+        height: auto !important;
+        display: block;
+    }
+
+    .ubc-editorial-img img {
+        height: auto !important;
+        object-fit: contain !important;
     }
     
     .ubc-editorial-content {
-        padding: 40px 20px;
+        padding: 60px 25px !important;
+        height: auto !important;
     }
-    
+
     .ubc-project-number {
-        font-size: 60px;
-        top: 20px;
-        right: 20px;
-        opacity: 0.1;
+        font-size: 40px !important;
+        top: 20px !important;
+        right: 20px !important;
+        opacity: 0.2 !important;
     }
-    
-    .ubc-modern-progress {
-        margin-bottom: 40px;
+
+    .ubc-thumb-nav {
+        width: 100% !important;
+        margin-top: 30px !important;
     }
-    
-    .ubc-thumb-nav .row {
-        margin: 0 -5px;
-    }
-    
-    .ubc-thumb-nav .col-4 {
-        padding: 0 5px;
+
+    .ubc-editorial-header h2 {
+        font-size: 32px !important;
     }
     
     .ubc-editorial-controls {

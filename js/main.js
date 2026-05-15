@@ -89,6 +89,12 @@ $(function () {
         ease: 'sine',
     });
 
+    timeline.to(".mil-frame", {
+        opacity: 1,
+        duration: 0.8,
+        ease: 'sine'
+    }, "-=0.8");
+
     timeline.fromTo(".mil-up", 0.8, {
         opacity: 0,
         y: 40,
@@ -379,6 +385,26 @@ $(function () {
         ease: 'sine',
         scrollTrigger: {
             scrub: 0.3
+        }
+    });
+
+    /***************************
+
+    header hide on scroll (mobile)
+
+    ***************************/
+    let lastScrollTop = 0;
+    $(window).scroll(function(event){
+        if ($(window).width() < 1200) {
+            let st = $(this).scrollTop();
+            if (st > lastScrollTop && st > 100){
+                // scroll down
+                $('.mil-frame-top').addClass('mil-header-hidden');
+            } else {
+                // scroll up
+                $('.mil-frame-top').removeClass('mil-header-hidden');
+            }
+            lastScrollTop = st;
         }
     });
     /***************************
