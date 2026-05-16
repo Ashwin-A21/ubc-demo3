@@ -370,41 +370,45 @@ img, .ubc-project-img, .ubc-project-card, .ubc-hero-section, .ubc-progress-conta
 
 /* Stats Section */
 .ubc-stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
-    margin-top: 60px;
+    display: flex;
+    gap: 60px;
+    margin-top: 40px;
+    flex-wrap: wrap;
 }
 
 .ubc-stat-item {
-    padding: 40px;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-bottom: 3px solid var(--accent);
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-left: 3px solid var(--accent);
+    padding-left: 20px;
     transition: all 0.3s ease;
 }
 
 .ubc-stat-item:hover {
-    background: rgba(255, 255, 255, 0.07);
-    transform: translateY(-5px);
+    background: transparent;
+    transform: translateX(5px);
 }
 
 .ubc-stat-number {
-    font-size: 64px;
+    font-size: 42px;
     font-weight: 800;
-    color: #118D57 !important; /* Force Premium Green Color */
-    margin-bottom: 10px;
+    color: var(--accent) !important;
+    margin-bottom: 8px;
     display: block;
     line-height: 1;
 }
 
 .ubc-stat-label {
-    font-size: 11px;
+    font-size: 10px;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #000000 !important; /* Force Black for Light BG */
-    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: #000000 !important;
+    font-weight: 700;
+    line-height: 1.4;
+    max-width: 150px;
 }
+
 
 /* Portfolio Section */
 .mil-cover-frame {
@@ -845,6 +849,104 @@ img, .ubc-project-img, .ubc-project-card, .ubc-hero-section, .ubc-progress-conta
     }
     
     .ubc-stat-number {
-        font-size: 40px;
+        font-size: 32px;
     }
 }
+/* Desktop Navbar */
+.ubc-desktop-nav {
+    display: none;
+    pointer-events: all;
+}
+
+@media screen and (min-width: 1201px) {
+    .ubc-desktop-nav {
+        display: block;
+        margin-left: auto;
+        margin-right: 40px;
+    }
+
+    .ubc-desktop-nav ul {
+        display: flex;
+        gap: 35px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .ubc-desktop-nav ul li a {
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #000000;
+        transition: all 0.3s ease;
+        position: relative;
+        opacity: 0.8;
+    }
+
+    .ubc-desktop-nav ul li a:hover,
+    .ubc-desktop-nav ul li a.active {
+        color: var(--accent) !important;
+        opacity: 1;
+    }
+    
+    .ubc-desktop-nav ul li a:after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: var(--accent);
+        transition: width 0.3s ease;
+    }
+    
+    .ubc-desktop-nav ul li a:hover:after,
+    .ubc-desktop-nav ul li a.active:after {
+        width: 100%;
+    }
+
+    /* Hide hamburger menu on desktop */
+    .mil-frame .mil-menu-btn {
+        display: none !important;
+    }
+    
+    /* White Navbar background */
+    .mil-frame-top {
+        background: rgba(255, 255, 255, 1) !important;
+        backdrop-filter: blur(10px);
+        height: 100px !important;
+        display: flex;
+        align-items: center;
+        padding: 0 80px !important;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        justify-content: flex-start !important;
+        width: 100% !important;
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        z-index: 9999 !important;
+    }
+    
+    /* Remove default frame padding for desktop */
+    .mil-frame {
+        padding: 0 !important;
+    }
+
+    .mil-frame-bottom {
+        padding: 0 80px 40px !important;
+    }
+}
+
+/* Outline Button */
+.mil-button.mil-button-outline {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: #fff;
+}
+
+.mil-button.mil-button-outline:hover {
+    background: #fff;
+    color: #000;
+}
+
